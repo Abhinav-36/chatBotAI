@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { getThemePallete } from './theme/ThemePallete';
-import { Grid } from '@mui/material'
+import { Grid2 } from '@mui/material'
 
 function App() {
 
@@ -29,14 +29,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
 
-        <Grid container sx={{ background: 'linear-gradient(rgba(215, 199, 244, 0.2), rgba(151, 133, 186, 0.2))' }} >
-          <Grid
-            item xs={12}
-            md={2.5}
+        <Grid2 container sx={{ background: 'linear-gradient(rgba(215, 199, 244, 0.2), rgba(151, 133, 186, 0.2))' }} >
+          <Grid2
+            item 
+            size={{xs:12,
+            md:2}}
             sx={{
               bgcolor: 'primary.light',
               '@media (max-width:800px)': {
-                width: '70%',
+                width: '50%',
                 transform: menuOpen ? 'translateX(0)' : 'translateX(-100%)',
                 transition: 'transform 400ms ease',
               },
@@ -47,11 +48,12 @@ function App() {
             boxShadow={{ xs: menuOpen ? 10 : 0, md: 0 }}
           >
             <Sidebar setChat={setChat} closeMenu={() => setMenuOpen(false)} />
-          </Grid>
-          <Grid item xs={12} md={9.5}>
+          </Grid2>
+          <Grid2 item size={{xs:12,
+            md:10}}>
             <Outlet context={{ chat: chat, setChat: setChat, handleMobileMenu: setMenuOpen }} />
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
 
       </ThemeProvider>
     </ThemeContext.Provider>

@@ -40,13 +40,13 @@ export const getThemePallete = (mode) => ({
     h1: {
       fontFamily: "Ubuntu, sans-serif",
       color: mode === "light" ? "#9785BA" : "#D7C7F4",
-      fontSize: 28,
+      fontSize: 35,
       fontWeight: 700,
     },
     h2: {
       fontFamily: "Ubuntu, sans-serif",
       color: "text.primary",
-      fontSize: 28,
+      fontSize: 30,
       fontWeight: 500,
       "@media (max-width:600px)": {
         fontSize: 22,

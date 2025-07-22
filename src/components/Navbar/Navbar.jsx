@@ -25,14 +25,14 @@ export default function Navbar() {
         )}
 
         <Link to={"/"} style={{ textDecoration: "none" }}>
-          <Typography variant="h1" component={"h1"}>
+          <Typography variant="h1" fontSize={35} component={"h1"}>
             Bot AI
           </Typography>
         </Link>
       </Stack>
 
       <Stack direction={"row"} spacing={0.2} alignItems={"center"}>
-        <Typography textTransform={"capitalize"} fontSize={10}>
+        <Typography textTransform={"capitalize"} fontSize={16}>
           {mode}
         </Typography>
         <IconButton

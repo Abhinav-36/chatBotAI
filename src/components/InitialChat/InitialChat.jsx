@@ -1,4 +1,4 @@
-import { Box, Typography, Stack, Grid } from '@mui/material'
+import { Box, Typography, Stack, Grid2 } from '@mui/material'
 import icon from '../../assets/bot.png'
 import Card from './Card'
 
@@ -43,13 +43,13 @@ export default function InitialChat({ generateResponse }) {
                     borderRadius={'50%'}
                 />
             </Stack>
-            <Grid container spacing={{ xs: 1, md: 3 }}>
+            <Grid2 container spacing={{ xs: 1, md: 3 }}>
                 {initialData.map(item => (
-                    <Grid item key={item.heading} xs={12} md={6}>
+                    <Grid2 item key={item.heading} size={{xs:12,md:6}}>
                         <Card heading={item.heading} subtext={item.subtext} handleClick={generateResponse} />
-                    </Grid>
+                    </Grid2>
                 ))}
-            </Grid>
+            </Grid2>
         </Stack>
     )
 }
